@@ -2,7 +2,7 @@
 
 import asyncio
 import logging
-from .sessions import runner
+from ..sessions import runner
 from google.genai import types
 
 async def call_agent_async(query: str, runner):

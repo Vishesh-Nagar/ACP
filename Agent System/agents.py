@@ -1,7 +1,7 @@
 # Agent definitions and runners.
 
 import logging
-from .Agents.root_agent import root_agent as agent_team
+from .agents.root_agent import root_agent as agent_team
 
 root_agent = agent_team
 
