@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>English-to-Spanish Translator</title>
+        <meta charset="UTF-8" />
+        <link href="./styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Translate English to Spanish</h1>
+        <form method="post">
+            <input
+                type="text"
+                name="phrase"
+                placeholder="Enter English phrase"
+                required
+            />
+            <button type="submit">Translate</button>
+        </form>
+        {% if translation %}
+        <h3>Spanish Translation:</h3>
+        <p>{{ translation }}</p>
+        {% endif %}
+    </body>
+</html>
