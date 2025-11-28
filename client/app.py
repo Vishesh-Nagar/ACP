@@ -1,3 +1,4 @@
+import os
 import requests
 from flask import Flask, render_template, request
 
@@ -23,8 +24,9 @@ def index():
             }
             try:
                 # Call the server's /runs endpoint (ACP-style)
+                server_url = os.environ.get("SERVER_URL", "http://localhost:8000")
                 resp = requests.post(
-                    "http://localhost:8000/runs",
+                    server_url + "/runs",
                     json=payload,
                     headers={"Content-Type": "application/json"},
                     timeout=15.0
